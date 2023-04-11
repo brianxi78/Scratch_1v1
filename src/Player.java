@@ -21,7 +21,10 @@ public class Player {
     public boolean up;
     public boolean FacingL;
     public boolean isJumping;
-
+    public boolean isShooting;
+    public boolean isShootingL;
+    public double lives = 4;
+    public double maxHp = 4;
 
     public Player(int pXpos, double pYpos, int dxParameter, double dyParameter) {
 
@@ -34,6 +37,8 @@ public class Player {
         isAlive = true;
         rec = new Rectangle(xpos, (int)ypos, width, height);
         FacingL = true;
+        isShooting = false;
+        isShootingL = false;
 
     } // constructor
 

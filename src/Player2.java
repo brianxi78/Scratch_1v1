@@ -7,12 +7,12 @@ import java.awt.*;
 		//VARIABLE DECLARATION SECTION
 		//Here's where you state which variables you are going to use.
 
-		public double xpos;                //the x position
+		public int xpos;                //the x position
 		public double ypos;                //the y position
 		public int width;
 		public int height;
 		public boolean isAlive;            //a boolean to denote if the hero is alive or dead.
-		public double dx;                    //the speed of the hero in the x direction
+		public int dx;                    //the speed of the hero in the x direction
 		public double dy;                    //the speed of the hero in the y direction
 		public Rectangle rec;
 		public Image pic;
@@ -23,6 +23,10 @@ import java.awt.*;
 		public boolean downM;
 		public boolean FacingL2;
 		public boolean isJumping;
+		public boolean isShooting;
+		public boolean isShootingL;
+		public double lives = 4;
+		public double maxHp = 4;
 
 		// METHOD DEFINITION SECTION
 
@@ -44,7 +48,7 @@ import java.awt.*;
 		} // constructor
 
 
-		public Player2(double pXpos, double pYpos, double dxParameter, double dyParameter) {
+		public Player2(int pXpos, double pYpos, int dxParameter, double dyParameter) {
 
 			xpos = pXpos;
 			ypos = pYpos;
@@ -55,6 +59,8 @@ import java.awt.*;
 			isAlive = true;
 			hits = 0;
 			rec = new Rectangle((int)xpos, (int)ypos, width, height);
+			isShooting = false;
+			isShootingL = false;
 
 
 		} // constructor
